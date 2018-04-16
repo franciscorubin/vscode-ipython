@@ -1,4 +1,6 @@
 This is an extension for VSCode that adds IPython commands and helpers, made to address many issues from the python development community:
+Download it here: https://marketplace.visualstudio.com/items?itemName=pancho111203.vscode-ipython
+
 
 https://github.com/DonJayamanne/vscodeJupyter/issues/19
 https://github.com/DonJayamanne/pythonVSCode/issues/480
