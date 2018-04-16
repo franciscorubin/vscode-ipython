@@ -1,0 +1,40 @@
+{
+    "name": "IPython Integration",
+    "displayName": "vscode-ipython",
+    "description": "Integration with IPython, including useful keybindings",
+    "version": "0.0.1",
+    "publisher": "pancho111203",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "ipython.sendFileContentsToIPython",
+                "title": "Send File Contents To IPython"
+            },
+            {
+                "command": "ipython.sendSelectedToIPython",
+                "title": "Send Selected Text (or current line) To IPython"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "eslint": "^3.6.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
