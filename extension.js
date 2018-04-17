@@ -53,11 +53,11 @@ function activate(context) {
         
         let startLine, endLine;
         if (editor.selection.isEmpty) {
-            startLine = editor.selection.active.line
+            startLine = editor.selection.active.line + 1
             endLine = startLine;
         } else {
-            startLine = editor.selection.start.line;
-            endLine = editor.selection.end.line;
+            startLine = editor.selection.start.line + 1;
+            endLine = editor.selection.end.line + 1;
         }
 
         sendQueuedText(`__file__ = '${filename}'`);
