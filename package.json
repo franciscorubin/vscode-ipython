@@ -3,7 +3,7 @@
     "displayName": "IPython for VSCode",
     "repository": "https://github.com/pancho111203/vscode-ipython",
     "description": "Integration with IPython, including useful keybindings",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "pancho111203",
     "engines": {
         "vscode": "^1.5.0"
