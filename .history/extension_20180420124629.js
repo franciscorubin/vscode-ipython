@@ -61,7 +61,6 @@ function activate(context) {
         }
 
         sendQueuedText(`__file__ = r'${filename}'`);
-        sendQueuedText('import sys')
         sendQueuedText('sys.path.append(os.path.dirname(__file__))')
         const command = `%load -r ${startLine}-${endLine} ${filename}`;
         sendQueuedText(command);
