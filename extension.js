@@ -60,7 +60,7 @@ function activate(context) {
             endLine = editor.selection.end.line + 1;
         }
 
-        sendQueuedText(`__file__ = '${filename}'`);
+        sendQueuedText(`__file__ = r'${filename}'`);
         sendQueuedText('sys.path.append(os.path.dirname(__file__))')
         const command = `%load -r ${startLine}-${endLine} ${filename}`;
         sendQueuedText(command);
@@ -75,7 +75,7 @@ function activate(context) {
 
         const editor = vscode.window.activeTextEditor;
         const filename = editor.document.fileName;
-        sendQueuedText(`__file__ = '${filename}'`);
+        sendQueuedText(`__file__ = r'${filename}'`);
         sendQueuedText('sys.path.append(os.path.dirname(__file__))')
         sendQueuedText(`%load ${filename}`, 100);
         sendQueuedText('\n\n');
