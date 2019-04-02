@@ -25,7 +25,24 @@
                 "command": "ipython.sendSelectedToIPython",
                 "title": "Send Selected Text (or current line) To IPython"
             }
-        ]
+        ],
+        "keybindings": [
+            {
+                "key": "ctrl+r",
+                "command": "ipython.sendFileContentsToIPython",
+                "when": "editorFocus && editorLangId == 'python'"
+            },
+            {
+                "key": "alt+enter",
+                "command": "ipython.sendSelectedToIPython",
+                "when": "editorFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+            },
+            {
+                "key": "shift+enter",
+                "command": "ipython.sendSelectedToIPythonAndAdvance",
+                "when": "editorFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+            }
+		]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install"
